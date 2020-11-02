@@ -54,7 +54,7 @@ func main() {
 		os.Exit(-1)
 	}
 
-	// create channel and jion
+	// create channel and join
 	if err := sdkenv.CreateAndJoinChannel(&info); err != nil {
 		fmt.Println(">> Create channel and join error:", err)
 		os.Exit(-1)

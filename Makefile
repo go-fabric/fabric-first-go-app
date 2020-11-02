@@ -30,7 +30,7 @@ run:
 	@cd ${GOPATH}/src/github.com/hyperledger/fabric-samples/test-network && configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID testchannel -asOrg Org1MSP -configPath ./configtx/
 	@cd ${GOPATH}/src/github.com/hyperledger/fabric-samples/test-network && configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID testchannel -asOrg Org2MSP -configPath ./configtx/
 	@chmod +x ./fabric-first-go-app
-	@./fabric-first-go-app
+	@nohup ./fabric-first-go-app > /dev/null 2>/home/verayy/data/fabric-first-go-app/error.log &
 
 ##### CLEAN
 clean: env-down
